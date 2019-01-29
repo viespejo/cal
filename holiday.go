@@ -15,6 +15,7 @@ const (
 	ObservedNearest ObservedRule = iota // nearest weekday (Friday or Monday)
 	ObservedExact                       // the exact day only
 	ObservedMonday                      // Monday always
+	ObservedSpain                       // Monday only if it falls on Sunday
 )
 
 // HolidayFn calculates the occurrence of a holiday for the given year.

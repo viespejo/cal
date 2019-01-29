@@ -164,6 +164,9 @@ func (c *Calendar) IsWorkday(date time.Time) bool {
 			sun := date.AddDate(0, 0, -1)
 			return !c.IsHoliday(sun)
 		}
+	} else if c.Observed == ObservedSpain && day == time.Monday {
+		sun := date.AddDate(0, 0, -1)
+		return !c.IsHoliday(sun)
 	}
 
 	return true
